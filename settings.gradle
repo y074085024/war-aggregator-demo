@@ -1,0 +1,6 @@
+rootProject.name = 'war-aggregator-demo'
+include 'modelAweb'
+include 'modelBweb'
+include 'commonjar'
+include 'finalproduct'
+

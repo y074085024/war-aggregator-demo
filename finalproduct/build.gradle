@@ -1,0 +1,12 @@
+// add gradle-waroverlay-plugin,similar to maven-war-plugin
+// https://bintray.com/scalding/maven/gradle-waroverlay-plugin
+apply from: "http://dl.bintray.com/scalding/generic/waroverlay.gradle"
+
+dependencies {
+    compile(
+            project(':commonjar')
+    )
+
+    runtime project(path: ':modelBweb', configuration: 'war')
+    runtime project(path: ':modelAweb', configuration: 'war')
+}

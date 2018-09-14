@@ -1,0 +1,1 @@
+alert("g.js of a");

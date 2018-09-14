@@ -1,0 +1,22 @@
+allprojects{
+    group 'com.ogemray'
+    version '1.0'
+    apply plugin:'java'
+    sourceCompatibility = 1.8
+    repositories {
+        jcenter()
+    }
+}
+
+configure(subprojects.findAll {
+    it.name.contains('web')
+}) {
+    apply plugin: 'war'
+    configurations {
+        war {}
+    }
+
+    artifacts {
+        war tasks.war
+    }
+}

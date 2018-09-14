@@ -1,0 +1,9 @@
+plugins{
+    id "org.gretty" version "2.2.0"
+}
+
+dependencies{
+    compile(
+            project(':commonjar')
+    )
+}
